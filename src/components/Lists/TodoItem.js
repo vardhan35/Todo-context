@@ -9,16 +9,17 @@ const TodoItem = ({ todo }) => {
     setIsComplete(!isComplete);
   };
   return (
-    <div
-      key={todo.id}
-      className={isComplete ? "todo-item-complete" : "todo-item"}
-    >
-      <h1>{todo.title}</h1>
-      <button type="button" onClick={() => removeTodo(todo.id)}>
+    <div key={todo.id} className="todo_item">
+      <input className="check_btn" type="checkbox" onClick={handleClick} />
+      <p className={isComplete ? "todo_para_complete" : "todo_para"}>
+        {todo.title}
+      </p>
+      <button
+        className="remove_btn"
+        type="button"
+        onClick={() => removeTodo(todo.id)}
+      >
         Remove
-      </button>
-      <button type="button" onClick={handleClick}>
-        button
       </button>
     </div>
   );

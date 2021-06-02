@@ -16,8 +16,8 @@ const InputBar = () => {
   };
 
   return (
-    <div className="input-bar">
-      <form action="" onSubmit={handleSubmit}>
+    <div className="input_bar">
+      <form action="" className="input_bar_form" onSubmit={handleSubmit}>
         <input
           type="text"
           value={title}
@@ -25,12 +25,14 @@ const InputBar = () => {
           placeholder="Add Todo..."
           required
         />
-        <button type="submit" onClick={handleSubmit}>
-          Add Todo
-        </button>
-        <button type="button" onClick={clearTodo}>
-          Clear Todos
-        </button>
+        <div className="input-action">
+          <button className="imput-btn" type="button" onClick={clearTodo}>
+            Clear All
+          </button>
+          <button className="imput-btn" type="submit" onClick={handleSubmit}>
+            Add Todo
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -1,3 +1,14 @@
 @import './config/resets';
+@import './config/variables';
 @import './Header/navbar';
 @import './Lists/todoItem';
+@import './Lists/todoLists';
+@import './Lists/inputBar';
+
+.app{
+  width: 100%;
+  height: 100vh;
+  margin:auto;
+  padding: 0;
+  color:$text-color;
+}
