@@ -11,7 +11,9 @@ const InputBar = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodo(title);
+    if (title.length) {
+      addTodo(title);
+    }
     setTitle("");
   };
 
@@ -25,11 +27,11 @@ const InputBar = () => {
           placeholder="Add Todo..."
           required
         />
-        <div className="input-action">
-          <button className="imput-btn" type="button" onClick={clearTodo}>
+        <div className="input_action">
+          <button className="clear_btn" type="button" onClick={clearTodo}>
             Clear All
           </button>
-          <button className="imput-btn" type="submit" onClick={handleSubmit}>
+          <button className="input_btn" type="submit" onClick={handleSubmit}>
             Add Todo
           </button>
         </div>

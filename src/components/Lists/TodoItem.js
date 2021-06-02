@@ -14,13 +14,7 @@ const TodoItem = ({ todo }) => {
       <p className={isComplete ? "todo_para_complete" : "todo_para"}>
         {todo.title}
       </p>
-      <button
-        className="remove_btn"
-        type="button"
-        onClick={() => removeTodo(todo.id)}
-      >
-        Remove
-      </button>
+      <i class="fa fa-trash-o" onClick={() => removeTodo(todo.id)} />
     </div>
   );
 };

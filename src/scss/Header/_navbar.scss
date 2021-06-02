@@ -1,6 +1,7 @@
 @import '../config/variables';
 
 .navbar{
+  display: flex;
   background-color: $navbar-background;
   top: 0;
   height: 60px;
@@ -8,6 +9,8 @@
   z-index: 1;
   position: fixed;
   width: 100%;
+  justify-content: space-between;
+  align-items: center;
   h1{
     align-items: center;
     width: 200px;

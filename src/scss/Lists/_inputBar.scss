@@ -1,3 +1,5 @@
+@import '../config/variables';
+
 .input_bar{
   width: 100%;
   &_form{
@@ -13,6 +15,43 @@
       width: 90%;
       height: 40px;
       padding: 0.5em 0.5em;
+      &:focus{
+        outline:none;
+      }
     }
+  }
+}
+
+.input_action{
+  justify-content: space-around;
+  width: 80%;
+  margin: 0.5em auto;
+  display: flex;
+  align-items: center;
+}
+
+.input_btn{
+  width: 100px;
+  border: none;
+  padding: 0.35em;
+  font-size: 1rem;
+  color: $white-color;
+  background-color:$dark-cta;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.02);
+  }
+}
+
+.clear_btn{
+  color: $white-color;
+  width: 100px;
+  background-color: $delete-color;
+  border: none;
+  padding: 0.35em;
+  font-size: 1rem;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.02);
   }
 }

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { TodoContext } from "../../context/TodoContext";
+import EmptyTodos from "./EmptyTodos";
 import InputBar from "./InputBar";
 import TodoItem from "./TodoItem";
 
@@ -17,7 +18,7 @@ const TodoLists = () => {
             return <TodoItem key={todo.id} todo={todo} />;
           })
         ) : (
-          <h1>Empty Todos</h1>
+          <EmptyTodos />
         )}
       </div>
     </div>

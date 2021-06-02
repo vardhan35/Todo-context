@@ -12,3 +12,11 @@
   padding: 0;
   color:$text-color;
 }
+
+@media (max-width:500px){
+  .navbar{
+    h1{
+      font-size: 1.8rem;
+    }
+  }
+}
